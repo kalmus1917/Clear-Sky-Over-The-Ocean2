@@ -1,6 +1,7 @@
 #-----------------------------------------
 # Egypt Focus Tree
 # By Herkles
+# and Nasserist Path made by Kalmus!
 #-----------------------------------------
 
 focus_tree = {
@@ -4854,5 +4855,545 @@ focus_tree = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {#Ba'ath
+		id = EGY_arab_dream
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13
+		y = 12
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {#Ba'ath
+		id = EGY_new_arab_society
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_arab_dream }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 12
+		y = 13
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_democracy_in_the_workplace
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_arab_dream }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 14
+		y = 13
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {#Ba'ath
+		id = EGY_break_kings_parties
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_democracy_in_the_workplace }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 15
+		y = 14
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_invest_in_education
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_democracy_in_the_workplace }
+		prerequisite = { focus = EGY_new_arab_society }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13
+		y = 14
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_hijab_ban
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_new_arab_society }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 11
+		y = 14
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_baath_supremacy
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_hijab_ban }
+		prerequisite = { focus = EGY_invest_in_education }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 12
+		y = 15
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_road_to_arab_socialism
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_break_kings_parties }
+		prerequisite = { focus = EGY_invest_in_education }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 14
+		y = 15
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_unity_of_arab_people
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_road_to_arab_socialism }
+		prerequisite = { focus = EGY_baath_supremacy }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13
+		y = 16
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {#Ba'ath
+		id = EGY_deal_with_the_germans
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_unity_of_arab_people }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 9
+		y = 17
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_destabilize_suez_garnison
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_the_germans }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 10
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_denounce_german_ownership_of_suez
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_the_germans }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 8
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {#Ba'ath
+		id = EGY_special_military_operation
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_denounce_german_ownership_of_suez }
+		prerequisite = { focus = EGY_destabilize_suez_garnison }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 9
+		y = 19
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {#Ba'ath
+		id = EGY_deal_with_arabic_states
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_unity_of_arab_people }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13	
+		y = 17
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_build_our_legitimacy
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_arabic_states }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 12	
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_reach_our_hand
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_arabic_states }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 14
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_unite_the_arabi
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_build_our_legitimacy }
+		prerequisite = { focus = EGY_reach_our_hand }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+			}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt		
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13
+		y = 19
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_deal_with_colonizers
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_unity_of_arab_people }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+					}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 17
+		y = 17
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_demand_french_withdrawal
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_colonizers }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+					}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 16
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_demand_spanish_surrender
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_deal_with_colonizers }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+					}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 18
+		y = 18
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_combat_colonial_influence
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_demand_french_withdrawal }	
+		prerequisite = { focus = EGY_demand_spanish_surrender }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+					}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 17
+		y = 19
+		ai_will_do = {}
+		
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {#Ba'ath
+		id = EGY_proclaim_united_arabia
+		icon = GFX_goal_generic_shipyard
+		cost = 8.00
+		prerequisite = { focus = EGY_special_military_operation }	
+		prerequisite = { focus = EGY_unite_the_arabi }
+		prerequisite = { focus = EGY_combat_colonial_influence }
+		available = {
+			has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+					}
+			custom_trigger_tooltip = {
+  				  tooltip = arab_dream_egypt_tt
+  				   has_cosmetic_tag = EGY_arabist
+			}	
+		}
+		x = 13
+		y = 20
+		ai_will_do = {}
+		
+		completion_reward = {
+			set_cosmetic_tag = EGY_arabist_united
+		}
 	}
 }

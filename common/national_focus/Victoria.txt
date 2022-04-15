@@ -1,0 +1,449 @@
+######################################################
+# German Focus Tree
+# By Zarasophos, Zankoas & ~mw~
+# Kurt von Schleicher Focus Tree
+# By Generalissimo Nook
+# GEX Reconstruction tree by idlemancer
+# Democracy tree by bchevy
+######################################################
+
+focus_tree = {
+	id = kaiserin_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 100
+			tag = GER
+			has_country_leader = {
+				name = "Victoria I"
+				ruling_only yes
+			}
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 0 y = 0 }
+	
+	focus = {
+		id = GER_kaiserin_victoria
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		x = 40
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_dealing_with_the_anarchy
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_kaiserin_victoria } 
+		x = 40
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_dealing_with_syndicalists
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_the_anarchy } 
+		x = 38
+		y = 2
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_welfare_plans
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_syndicalists } 
+		x = 39
+		y = 3
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_make_workers_life_better
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_welfare_plans } 
+		x = 39
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_rally_the_workers
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_welfare_plans } 
+		x = 41
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_volkskaiserin
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_make_workers_life_better }	
+		prerequisite = { focus = GER_rally_the_workers } 
+		x = 40
+		y = 5
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_new_german_dream
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_imperial_benelovence } 
+		prerequisite = { focus = GER_volkskaiserin }
+		x = 38
+		y = 6
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_junker_problem
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_syndicalists } 
+		x = 37
+		y = 3
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_corporate_tax
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_junker_problem } 
+		x = 37
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GER_end_economical_anarchy
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_junker_problem } 
+		x = 35
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_imperial_benelovence
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_end_economical_anarchy } 
+		prerequisite = { focus = GER_corporate_tax }
+		x = 36
+		y = 5
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_dealing_with_corruption
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_the_anarchy } 
+		x = 42
+		y = 2
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_limit_noble_privileges
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_corruption } 
+		x = 43
+		y = 3
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_kick_out_careerists
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_dealing_with_corruption } 
+		x = 45
+		y = 3
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	
+	focus = {
+		id = GER_imperial_anti_corruption_council
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_limit_noble_privileges } 
+		prerequisite = { focus = GER_kick_out_careerists }
+		x = 44
+		y = 4
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_monitor_the_parties
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_imperial_anti_corruption_council } 
+		x = 45
+		y = 5
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_idealist_empire
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_imperial_anti_corruption_council } 
+		x = 43
+		y = 5
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_pure_germany
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_idealist_empire } 
+		prerequisite = { focus = GER_monitor_the_parties } 
+		x = 44
+		y = 6
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_new_reichskanzler
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_new_german_dream }
+		prerequisite = { focus = GER_pure_germany }
+		x = 40
+		y = 7
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+		
+	focus = {
+		id = GER_the_diamond
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_new_reichskanzler }
+		x = 40
+		y = 8
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_iron
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_new_reichskanzler }
+		x = 30
+		y = 8
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_ruby
+		icon = GFX_goal_POL_Regency_Thing
+		available = {
+			
+		}
+		prerequisite = { focus = GER_new_reichskanzler }
+		x = 50
+		y = 8
+		cost = 2
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+}
