@@ -4,6 +4,7 @@
 ###########################
 
 add_namespace = egy
+add_namespace = nasser
 
 country_event = { # Introduction Event
 	id = egy.1
@@ -75,6 +76,10 @@ country_event = { # Death of Fuad I
 			country_event = {
 				id = egy.113
 				days = 456
+			}
+			country_event = {
+				id = nasser.1
+				days = 31
 			}
 		}
 	}
@@ -4326,4 +4331,379 @@ country_event = { # Tripolitania Counters Our Influence
 		add_stability = -0.10
 		add_war_support = -0.10
 	}
+}
+
+country_event = { # Introduction to Arab Socialist Baath Party
+	id = nasser.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.1" }
+	title = nasser.1.t
+	desc = nasser.1.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.1.a
+		add_political_power = 10
+	}
+
+	option = { #leave them be
+		name = nasser.1.b
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = nasser.2
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # Ba'athists gather the support
+	id = nasser.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.2" }
+	title = nasser.2.t
+	desc = nasser.2.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.2.a
+		add_political_power = 10
+	}
+
+	option = { #leave them be
+		name = nasser.2.b
+		set_party_name = { 
+ 			   ideology = totalist
+ 			   long_name = "Arab Socialist Ba'ath Party" 
+ 			   name = "Ba'ath"
+		}
+		create_country_leader = {
+			name = "Gamal Abdel Nasser"
+			desc = "POLITICS_NASSER_DESC"
+			picture = "gfx/leaders/EGY/Portrait_EGY_Gamel_Abdel_Nasser.png"
+			expire = "1965.1.1"
+			ideology = nasserism_subtype
+			traits = {
+		
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = nasser.3
+				days = 14
+			}
+		}
+	}
+}
+country_event = { # chaos
+	id = nasser.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.3" }
+	title = nasser.3.t
+	desc = nasser.3.d
+	is_triggered_only = yes
+
+	option = { #fuck
+		name = nasser.3.a
+		add_political_power = -100
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = {
+				id = nasser.4
+				days = 7
+			}
+		}
+	}
+
+}
+
+country_event = { # watabi habiiibi
+	id = nasser.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.4" }
+	title = nasser.4.t
+	desc = nasser.4.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.4.a
+		add_political_power = 200
+		set_politics = {
+			ruling_party = totalist
+    			elections_allowed = no
+   			 last_election = "1935.12.17"
+   			 election_frequency = 48
+		}
+		set_cosmetic_tag = EGY_arabist
+	}
+
+}
+
+country_event = { # aneksja event chain
+	id = nasser.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.5" }
+	title = nasser.5.t
+	desc = nasser.5.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.5.a
+				every_country = {
+						limit = {
+							capital_scope = {
+								is_on_continent = middle_east
+							}
+							AND = {
+								NOT = {
+								tag = GEO
+								tag = ARM
+								tag = AZE
+								tag = PER 
+								tag = OTT
+								tag = TUR
+								}
+							}
+						}
+						country_event = {
+							id = nasser.6
+							days = 3
+						}
+				}
+				LBA = {
+					country_event = {
+							id = nasser.6
+							days = 3
+						}
+				}
+				ETH = {
+					country_event = {
+							id = nasser.6
+							days = 3
+						}
+				}
+				
+				SOM = {
+					country_event = {
+							id = nasser.6
+							days = 3
+						}
+				}
+	}
+
+}
+country_event = { # pytanie o aneksję
+	id = nasser.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.6" }
+	title = nasser.6.t
+	desc = nasser.6.d
+	is_triggered_only = yes
+
+	option = { #ye
+		name = nasser.6.a
+			every_owned_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_core_of = EGY
+					add_claim_by = EGY
+			}
+			EGY = {
+				annex_country = {
+    				target = ROOT 
+   					 transfer_troops = yes
+				}
+			}
+			ai_chance = {
+				factor = 60
+			}
+				
+		
+		
+	}
+	
+	option = { #nah
+		name = nasser.6.b
+			EGY = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT
+				}
+			}
+			ai_chance = {
+				factor = 40
+			}
+				
+		
+		
+	}
+	
+
+}
+
+country_event = { # suez - decyzja o ataku
+	id = nasser.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.7" }
+	title = nasser.7.t
+	desc = nasser.7.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.7.a
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 446
+				num_provinces = 2
+				on_win = nasser.8
+				on_lose = nasser.9
+			}
+				
+			defender = {
+				state = 753
+				num_provinces = 2
+				on_win = nasser.9
+				on_lose = nasser.8
+			}
+		}
+	}
+
+}
+country_event = { # suez - egipt wygrywa
+	id = nasser.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.8"}
+	title = nasser.8.t
+	desc = nasser.8.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.8.a
+		EGY = {
+			transfer_state = 753
+		}
+	}
+
+}
+
+country_event = { # suez - niemcy wygyrwają
+	id = nasser.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.9"}
+	title = nasser.9.t
+	desc = nasser.9.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.9.a
+		EGY = {
+			add_stability = -0.05
+		}
+	}
+
+}
+
+country_event = { # Francja - żądanie wycofania z Arabii
+	id = nasser.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.10" }
+	title = nasser.10.t
+	desc = nasser.10.d
+	is_triggered_only = yes
+
+	option = { #beat them up
+		name = nasser.10.d
+		NFA = { 
+			country_event = {
+					id = nasser.10
+					days = 7
+			}
+		}
+	}
+
+}
+
+country_event = { # Francja - francuzi decydują
+	id = nasser.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.11"}
+	title = nasser.11.t
+	desc = nasser.11.d
+	is_triggered_only = yes
+
+	option = { #wycofają się
+		name = nasser.11.a
+		EGY = {
+			country_event = {
+					id = nasser.12
+					days = 2
+			}
+		}
+	}
+	
+	option = { #wycofają się
+		name = nasser.11.b
+		EGY = {
+			country_event = {
+					id = nasser.13
+					days = 2
+			}
+		}
+	}
+
+}
+
+country_event = { # Francja - Arabowie dostają swoje
+	id = nasser.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.12" }
+	title = nasser.12.t
+	desc = nasser.12.d
+	is_triggered_only = yes
+
+	option = { #URRRAAAA
+		name = nasser.12.d
+		EGY = {
+			transfer_state = 458
+			transfer_state = 460
+			transfer_state = 459
+			transfer_state = 805
+			transfer_state = 513
+			transfer_state = 514
+			transfer_state = 665
+		}
+	}
+
+}
+
+country_event = { # Francja - francuzi nie chcą oddać nic
+	id = nasser.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.13"}
+	title = nasser.13.t
+	desc = nasser.13.d
+	is_triggered_only = yes
+
+	option = { #KURRRRRWAA
+		name = nasser.13.a
+		EGY = {
+				create_wargoal = {
+					type = annex_everything
+					target = NFA
+				}
+			}
+	}
+
+}
+country_event = { # rodzi sie Gaddafi
+	id = nasser.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nasser.14"}
+	title = nasser.14.t
+	desc = nasser.14.d
+	trigger = {
+		tag = EGY
+		has_country_leader = {
+					name = "Gamal Abdel Nasser"
+					ruling_only = yes
+		}
+		date > 1940.01.01
+	}
+	
+	mean_time_to_happen = { days = 14 }
+
+	option = { #KURRRRRWAA
+		name = nasser.14.a
+
+	}
+
 }
