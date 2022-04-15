@@ -130,6 +130,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_country_leader_ideology = nasserism_subtype
+		}
+		localization_key = nasserism_subtype
+	}	
+
+	text = {
+		trigger = {
 			has_country_leader_ideology = totalist_subtype
 		}
 		localization_key = totalist_subtype
@@ -532,12 +539,6 @@ defined_text = {
 		}
 		localization_key = eco_anarchism_subtype
 	}
-        text = {
-		trigger = {
-			has_country_leader_ideology = sandinismo_subtype
-		}
-		localization_key = sandinismo_subtype
-	}
 
 	text = {
 		trigger = {
@@ -885,17 +886,11 @@ defined_text = {
 		}
 		localization_key = national_conservative_subtype
 	}
-    text = {
+        text = {
 		trigger = {
 			has_country_leader_ideology = paternal_socialism_subtype
 		}
 		localization_key = paternal_socialism_subtype
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = soccon_ukrainian_conservatism_subtype
-		}
-		localization_key = soccon_ukrainian_conservatism_subtype
 	}
 
 	text = {
@@ -1018,17 +1013,11 @@ defined_text = {
 		}
 		localization_key = social_machine_subtype
 	}
-    text = {
+        text = {
 		trigger = {
 			has_country_leader_ideology = authdem_pan_asianism_subtype
 		}
 		localization_key = authdem_pan_asianism_subtype
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = ukrainian_conservatism_subtype
-		}
-		localization_key = ukrainian_conservatism_subtype
 	}
 
 	text = {
@@ -1157,17 +1146,11 @@ defined_text = {
 		}
 		localization_key = pataut_authoritarian_liberalism_subtype
 	}
-    text = {
+        text = {
 		trigger = {
 			has_country_leader_ideology = pataut_pan_asianism_subtype
 		}
 		localization_key = pataut_pan_asianism_subtype
-	}
-	text = {
-		trigger = {
-			has_country_leader_ideology = pataut_ukrainian_conservatism_subtype
-		}
-		localization_key = pataut_ukrainian_conservatism_subtype
 	}
 	
 	text = {
